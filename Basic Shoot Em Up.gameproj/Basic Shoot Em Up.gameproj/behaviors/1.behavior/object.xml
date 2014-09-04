@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<behavior id="id536926" class="RuleBehavior" enabled="true" GSCVersion="0.10.0" PGFVersion="0.19">
+  <attributes>
+    <text id="name">Rule</text>
+    <text id="bundleName">Rule.behavior</text>
+    <real id="compoundConditionKind">0</real>
+  </attributes>
+  <conditions>
+    <condition id="id257410" eventType="mouse position" pluginPredicateTypeIndex="0" class="AttributeCondition">
+      <attributes>
+        <index id="conditionType">1</index>
+        <text id="subjectAttribute" />
+        <text id="name">default name</text>
+      </attributes>
+      <predicate type="unset">
+        <attributes />
+      </predicate>
+    </condition>
+  </conditions>
+</behavior>

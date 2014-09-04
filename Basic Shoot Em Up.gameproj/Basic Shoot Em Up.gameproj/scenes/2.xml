@@ -3,11 +3,34 @@
   <layers>
     <layer id="id374869">
       <actors>
+        <actor id="id653285" prototype="id682373">
+          <attributes>
+            <point id="position">
+              <real id="x">240.5</real>
+              <real id="y">156.5</real>
+            </point>
+            <size id="size">
+              <real id="width">480</real>
+              <real id="height">320</real>
+            </size>
+            <angle id="rotation">0</angle>
+          </attributes>
+          <behaviors />
+          <aspects>
+            <graphics>
+              <attributes />
+            </graphics>
+            <motion />
+            <physics>
+              <attributes />
+            </physics>
+          </aspects>
+        </actor>
         <actor id="id795102" prototype="id374390">
           <attributes>
             <point id="position">
-              <real id="x">440.5</real>
-              <real id="y">125</real>
+              <real id="x">36.5</real>
+              <real id="y">163</real>
             </point>
             <size id="size">
               <real id="width">75</real>
@@ -19,7 +42,7 @@
           <behaviors>
             <behavior id="id695398" class="RuleBehavior" enabled="true">
               <attributes>
-                <text id="name">Rule</text>
+                <text id="name">Move Down</text>
                 <text id="bundleName">Rule.behavior</text>
                 <real id="compoundConditionKind">0</real>
               </attributes>
@@ -65,7 +88,7 @@
             </behavior>
             <behavior id="id485263" class="RuleBehavior" enabled="true">
               <attributes>
-                <text id="name">Rule</text>
+                <text id="name">Move Up</text>
                 <text id="bundleName">Rule.behavior</text>
                 <real id="compoundConditionKind">0</real>
               </attributes>
@@ -111,7 +134,7 @@
             </behavior>
             <behavior id="id174479" class="RuleBehavior" enabled="true">
               <attributes>
-                <text id="name">Rule</text>
+                <text id="name">Move Left</text>
                 <text id="bundleName">Rule.behavior</text>
                 <real id="compoundConditionKind">0</real>
               </attributes>
@@ -157,7 +180,7 @@
             </behavior>
             <behavior id="id703781" class="RuleBehavior" enabled="true">
               <attributes>
-                <text id="name">Rule</text>
+                <text id="name">Move Right</text>
                 <text id="bundleName">Rule.behavior</text>
                 <real id="compoundConditionKind">0</real>
               </attributes>
@@ -201,6 +224,103 @@
                 </behavior>
               </behaviors>
             </behavior>
+            <behavior id="id243419" class="ConstrainAttributeBehavior" enabled="true">
+              <attributes>
+                <text id="name">Gimme Dat Y</text>
+                <text id="bundleName">ConstrainAttribute.behavior</text>
+                <text id="targetAttribute">game.attributes.id388541</text>
+                <text id="RHS">
+                  <expression>
+                    <reference keypath="self.attributes.position.y" />
+                  </expression>
+                </text>
+              </attributes>
+            </behavior>
+            <behavior id="id382860" class="ConstrainAttributeBehavior" enabled="true">
+              <attributes>
+                <text id="name">Gimme Dat X</text>
+                <text id="bundleName">ConstrainAttribute.behavior</text>
+                <text id="targetAttribute">game.attributes.id109120</text>
+                <text id="RHS">
+                  <expression>
+                    <reference keypath="self.attributes.position.x" />
+                  </expression>
+                </text>
+              </attributes>
+            </behavior>
+            <behavior id="id984064" class="RuleBehavior" enabled="true">
+              <attributes>
+                <text id="name">FIRE!</text>
+                <text id="bundleName">Rule.behavior</text>
+                <real id="compoundConditionKind">0</real>
+              </attributes>
+              <conditions>
+                <condition id="id895347" eventType="key" pluginPredicateTypeIndex="0" class="Key">
+                  <attributes>
+                    <text id="name">default name</text>
+                    <index id="conditionType">0</index>
+                  </attributes>
+                  <predicate type="key">
+                    <attributes>
+                      <text id="mode">down</text>
+                      <text id="keyString">space</text>
+                    </attributes>
+                  </predicate>
+                </condition>
+              </conditions>
+              <behaviors>
+                <behavior id="id983353" class="SpawnAction" enabled="true">
+                  <attributes>
+                    <text id="name">Spawn Actor</text>
+                    <text id="bundleName">Spawn.behavior</text>
+                    <text id="prototypeKey">id794126</text>
+                    <angle id="direction">0</angle>
+                    <index id="directionSpace">0</index>
+                    <real id="x">0</real>
+                    <real id="y">0</real>
+                    <index id="positionSpace">0</index>
+                    <index id="layerOrder">0</index>
+                  </attributes>
+                </behavior>
+              </behaviors>
+            </behavior>
+            <behavior id="id893294" class="RuleBehavior" enabled="true">
+              <attributes>
+                <text id="name">Get Shot</text>
+                <text id="bundleName">Rule.behavior</text>
+                <real id="compoundConditionKind">0</real>
+              </attributes>
+              <conditions>
+                <condition id="id682502" eventType="overlaps or collides" pluginPredicateTypeIndex="0" class="Collision">
+                  <attributes>
+                    <text id="name">default name</text>
+                    <index id="conditionType">0</index>
+                  </attributes>
+                  <predicate type="collision">
+                    <attributes>
+                      <text id="prototypeKey">id151461</text>
+                      <text id="actorTag" />
+                      <real id="mode">0</real>
+                    </attributes>
+                  </predicate>
+                </condition>
+              </conditions>
+              <behaviors>
+                <behavior id="id910555" class="ChangeAttributeAction" enabled="true">
+                  <attributes>
+                    <text id="name">Change Attribute</text>
+                    <text id="bundleName">ChangeAttribute.behavior</text>
+                    <text id="targetAttribute">game.attributes.id720029</text>
+                    <text id="RHS">
+                      <expression>
+                        <reference keypath="game.attributes.id720029" />
+                        <string> -  10</string>
+                      </expression>
+                    </text>
+                  </attributes>
+                </behavior>
+              </behaviors>
+            </behavior>
           </behaviors>
           <aspects>
             <graphics>
@@ -208,6 +328,30 @@
                 <integer id="tileWidth" name="tileWidth">0</integer>
                 <integer id="tileHeight" name="tileHeight">0</integer>
               </attributes>
+            </graphics>
+            <motion />
+            <physics>
+              <attributes />
+            </physics>
+          </aspects>
+        </actor>
+        <actor id="id675501" prototype="id761755">
+          <attributes>
+            <point id="position">
+              <real id="x">734.5</real>
+              <real id="y">161</real>
+            </point>
+            <size id="size">
+              <real id="width">500</real>
+              <real id="height">200</real>
+            </size>
+            <angle id="rotation">0</angle>
+            <image id="image">boss</image>
+          </attributes>
+          <behaviors />
+          <aspects>
+            <graphics>
+              <attributes />
             </graphics>
             <motion />
             <physics>
