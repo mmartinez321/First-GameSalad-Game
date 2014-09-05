@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<behavior id="id950823" class="RuleBehavior" enabled="true" GSCVersion="0.10.0" PGFVersion="0.19">
+  <attributes>
+    <text id="name">Rule</text>
+    <text id="bundleName">Rule.behavior</text>
+    <real id="compoundConditionKind">0</real>
+  </attributes>
+  <conditions>
+    <condition id="id193704" eventType="overlaps or collides" pluginPredicateTypeIndex="0" class="Collision">
+      <attributes>
+        <text id="name">default name</text>
+        <index id="conditionType">0</index>
+      </attributes>
+      <predicate type="collision">
+        <attributes>
+          <text id="prototypeKey">id794126</text>
+          <text id="actorTag" />
+          <real id="mode">0</real>
+        </attributes>
+      </predicate>
+    </condition>
+  </conditions>
+  <behaviors>
+    <behavior id="id908847" class="ChangeAttributeAction" enabled="true">
+      <attributes>
+        <text id="name">Change Attribute</text>
+        <text id="bundleName">ChangeAttribute.behavior</text>
+        <text id="targetAttribute">game.attributes.id613598</text>
+        <text id="RHS">
+          <expression>
+            <reference keypath="game.attributes.id613598" />
+            <string>-10</string>
+          </expression>
+        </text>
+      </attributes>
+    </behavior>
+  </behaviors>
+</behavior>

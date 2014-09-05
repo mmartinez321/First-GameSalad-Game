@@ -38,8 +38,8 @@ http://gamesalad.com/wiki/tutorials:basic_shoot_em_up</instructions>
     <attributes id="playhaven" />
   </plugins>
   <scenes>
-    <scene id="id781812" />
     <scene id="id204507" />
+    <scene id="id781812" />
   </scenes>
   <attributes>
     <text id="name">default name</text>
