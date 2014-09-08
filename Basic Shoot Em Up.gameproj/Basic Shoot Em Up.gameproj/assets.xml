@@ -9,9 +9,6 @@
     </sound>
   </sounds>
   <images>
-    <image name="sunset">
-      <file name="sunset.jpg" size="8203" />
-    </image>
     <image name="planet">
       <file name="planet.png" size="29127" />
     </image>
@@ -83,6 +80,9 @@
     </image>
     <image name="missile">
       <file name="missile.png" size="1605" />
+    </image>
+    <image name="sunset">
+      <file name="sunset.png" size="66181" />
     </image>
   </images>
   <behaviors />

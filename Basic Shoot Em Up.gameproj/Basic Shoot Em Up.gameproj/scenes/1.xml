@@ -3,6 +3,28 @@
   <layers>
     <layer id="id374869">
       <actors>
+        <actor id="id429610" prototype="id369638">
+          <attributes>
+            <point id="position">
+              <real id="x">240.5</real>
+              <real id="y">158</real>
+            </point>
+            <size id="size">
+              <real id="width">480</real>
+              <real id="height">320</real>
+            </size>
+            <angle id="rotation">0</angle>
+          </attributes>
+          <aspects>
+            <graphics>
+              <attributes />
+            </graphics>
+            <motion />
+            <physics>
+              <attributes />
+            </physics>
+          </aspects>
+        </actor>
         <actor id="id200334" prototype="id926383">
           <attributes>
             <point id="position">
@@ -18,7 +40,10 @@
           </attributes>
           <aspects>
             <graphics>
-              <attributes />
+              <attributes>
+                <integer id="tileWidth" name="tileWidth">0</integer>
+                <integer id="tileHeight" name="tileHeight">0</integer>
+              </attributes>
             </graphics>
             <motion />
             <physics>
@@ -41,29 +66,6 @@
           </attributes>
           <aspects>
             <graphics>
-              <attributes />
-            </graphics>
-            <motion />
-            <physics>
-              <attributes />
-            </physics>
-          </aspects>
-        </actor>
-        <actor id="id653285" prototype="id682373">
-          <attributes>
-            <point id="position">
-              <real id="x">240.5</real>
-              <real id="y">156.5</real>
-            </point>
-            <size id="size">
-              <real id="width">480</real>
-              <real id="height">320</real>
-            </size>
-            <angle id="rotation">0</angle>
-          </attributes>
-          <behaviors />
-          <aspects>
-            <graphics>
               <attributes>
                 <integer id="tileWidth" name="tileWidth">0</integer>
                 <integer id="tileHeight" name="tileHeight">0</integer>
@@ -79,7 +81,7 @@
           <attributes>
             <point id="position">
               <real id="x">36.5</real>
-              <real id="y">163</real>
+              <real id="y">162</real>
             </point>
             <size id="size">
               <real id="width">75</real>
@@ -411,6 +413,14 @@
                     <text id="bundleName">Destroy.behavior</text>
                   </attributes>
                 </behavior>
+                <behavior id="id295501" class="ChangeAttributeAction" enabled="true">
+                  <attributes>
+                    <text id="name">Change Attribute</text>
+                    <text id="bundleName">ChangeAttribute.behavior</text>
+                    <text id="targetAttribute">game.attributes.id720029</text>
+                    <text id="RHS">0</text>
+                  </attributes>
+                </behavior>
               </behaviors>
             </behavior>
             <behavior id="id335523" class="RuleBehavior" enabled="true">
@@ -452,6 +462,65 @@
                   <attributes>
                     <text id="name">Destroy</text>
                     <text id="bundleName">Destroy.behavior</text>
+                  </attributes>
+                </behavior>
+                <behavior id="id820082" class="ChangeAttributeAction" enabled="true">
+                  <attributes>
+                    <text id="name">Change Attribute</text>
+                    <text id="bundleName">ChangeAttribute.behavior</text>
+                    <text id="targetAttribute">game.attributes.id720029</text>
+                    <text id="RHS">0</text>
+                  </attributes>
+                </behavior>
+              </behaviors>
+            </behavior>
+            <behavior id="id486766" class="RuleBehavior" enabled="true">
+              <attributes>
+                <text id="name">Game Is Over </text>
+                <text id="bundleName">Rule.behavior</text>
+                <real id="compoundConditionKind">0</real>
+              </attributes>
+              <conditions>
+                <condition id="id393433" eventType="mouse position" pluginPredicateTypeIndex="0" class="AttributeCondition">
+                  <attributes>
+                    <index id="conditionType">1</index>
+                    <text id="subjectAttribute">game.attributes.id720029</text>
+                    <text id="name">default name</text>
+                  </attributes>
+                  <predicate type="number">
+                    <attributes>
+                      <text id="operator">&lt;=</text>
+                      <real id="RHS">0</real>
+                    </attributes>
+                  </predicate>
+                </condition>
+              </conditions>
+              <behaviors>
+                <behavior id="id740409" class="SpawnAction" enabled="true">
+                  <attributes>
+                    <text id="name">Spawn Actor</text>
+                    <text id="bundleName">Spawn.behavior</text>
+                    <text id="prototypeKey">id751213</text>
+                    <angle id="direction">0</angle>
+                    <index id="directionSpace">0</index>
+                    <real id="x">0</real>
+                    <real id="y">0</real>
+                    <index id="positionSpace">0</index>
+                    <index id="layerOrder">0</index>
+                  </attributes>
+                </behavior>
+                <behavior id="id174349" class="DestroyAction" enabled="true">
+                  <attributes>
+                    <text id="name">Destroy</text>
+                    <text id="bundleName">Destroy.behavior</text>
+                  </attributes>
+                </behavior>
+                <behavior id="id183941" class="ChangeSceneAction" enabled="true">
+                  <attributes>
+                    <text id="name">Change Scene</text>
+                    <text id="bundleName">ChangeScene.behavior</text>
+                    <text id="sceneKey">id781812</text>
+                    <boolean id="enableAdvertisement">false</boolean>
                   </attributes>
                 </behavior>
               </behaviors>
@@ -607,6 +676,22 @@
                     <text id="bundleName">Destroy.behavior</text>
                   </attributes>
                 </behavior>
+                <behavior id="id806799" class="ChangeAttributeAction" enabled="true">
+                  <attributes>
+                    <text id="name">Change Attribute</text>
+                    <text id="bundleName">ChangeAttribute.behavior</text>
+                    <text id="targetAttribute">game.attributes.id148203</text>
+                    <text id="RHS">false</text>
+                  </attributes>
+                </behavior>
+                <behavior id="id825882" class="ChangeSceneAction" enabled="true">
+                  <attributes>
+                    <text id="name">Change Scene</text>
+                    <text id="bundleName">ChangeScene.behavior</text>
+                    <text id="sceneKey">id781812</text>
+                    <boolean id="enableAdvertisement">false</boolean>
+                  </attributes>
+                </behavior>
               </behaviors>
             </behavior>
           </behaviors>
@@ -637,7 +722,10 @@
           </attributes>
           <aspects>
             <graphics>
-              <attributes />
+              <attributes>
+                <integer id="tileWidth" name="tileWidth">0</integer>
+                <integer id="tileHeight" name="tileHeight">0</integer>
+              </attributes>
             </graphics>
             <motion />
             <physics>
@@ -659,7 +747,10 @@
           </attributes>
           <aspects>
             <graphics>
-              <attributes />
+              <attributes>
+                <integer id="tileWidth" name="tileWidth">0</integer>
+                <integer id="tileHeight" name="tileHeight">0</integer>
+              </attributes>
             </graphics>
             <motion />
             <physics>
