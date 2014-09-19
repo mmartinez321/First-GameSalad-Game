@@ -17,7 +17,10 @@
           </attributes>
           <aspects>
             <graphics>
-              <attributes />
+              <attributes>
+                <integer id="tileWidth" name="tileWidth">0</integer>
+                <integer id="tileHeight" name="tileHeight">0</integer>
+              </attributes>
             </graphics>
             <motion />
             <physics>
@@ -28,7 +31,7 @@
         <actor id="id429610" prototype="id369638">
           <attributes>
             <point id="position">
-              <real id="x">377.5</real>
+              <real id="x">381.5</real>
               <real id="y">94.5</real>
             </point>
             <size id="size">
@@ -39,14 +42,14 @@
             <image id="image">KittyKat</image>
           </attributes>
           <behaviors>
-            <behavior id="id957811" class="RuleBehavior" enabled="true">
+            <behavior id="id423284" class="RuleBehavior" enabled="true">
               <attributes>
-                <text id="name">To the left</text>
+                <text id="name">MOVEMENTS</text>
                 <text id="bundleName">Rule.behavior</text>
-                <real id="compoundConditionKind">1</real>
+                <real id="compoundConditionKind">0</real>
               </attributes>
               <conditions>
-                <condition id="id965165" eventType="mouse position" pluginPredicateTypeIndex="0" class="AttributeCondition">
+                <condition id="id622591" eventType="mouse position" pluginPredicateTypeIndex="0" class="AttributeCondition">
                   <attributes>
                     <index id="conditionType">1</index>
                     <text id="subjectAttribute">game.attributes.id711991</text>
@@ -60,7 +63,7 @@
                 </condition>
               </conditions>
               <behaviors>
-                <behavior id="id251153" class="MoveBehavior" enabled="true">
+                <behavior id="id742155" class="MoveBehavior" enabled="true">
                   <attributes>
                     <text id="name">Move</text>
                     <text id="bundleName">Move.behavior</text>
@@ -71,29 +74,8 @@
                   </attributes>
                 </behavior>
               </behaviors>
-            </behavior>
-            <behavior id="id563251" class="RuleBehavior" enabled="true">
-              <attributes>
-                <text id="name">To the right</text>
-                <text id="bundleName">Rule.behavior</text>
-                <real id="compoundConditionKind">0</real>
-              </attributes>
-              <conditions>
-                <condition id="id981530" eventType="mouse position" pluginPredicateTypeIndex="0" class="AttributeCondition">
-                  <attributes>
-                    <index id="conditionType">1</index>
-                    <text id="subjectAttribute">game.attributes.id711991</text>
-                    <text id="name">default name</text>
-                  </attributes>
-                  <predicate type="boolean">
-                    <attributes>
-                      <index id="RHS">0</index>
-                    </attributes>
-                  </predicate>
-                </condition>
-              </conditions>
-              <behaviors>
-                <behavior id="id359941" class="MoveBehavior" enabled="true">
+              <elseBehaviors>
+                <behavior id="id201024" class="MoveBehavior" enabled="true">
                   <attributes>
                     <text id="name">Move</text>
                     <text id="bundleName">Move.behavior</text>
@@ -101,6 +83,41 @@
                     <index id="space">0</index>
                     <index id="moveType">0</index>
                     <real id="speed">300</real>
+                  </attributes>
+                </behavior>
+              </elseBehaviors>
+            </behavior>
+            <behavior id="id793979" class="RuleBehavior" enabled="true">
+              <attributes>
+                <text id="name">Rule</text>
+                <text id="bundleName">Rule.behavior</text>
+                <real id="compoundConditionKind">0</real>
+              </attributes>
+              <conditions>
+                <condition id="id129807" eventType="overlaps or collides" pluginPredicateTypeIndex="0" class="Collision">
+                  <attributes>
+                    <text id="name">default name</text>
+                    <index id="conditionType">0</index>
+                  </attributes>
+                  <predicate type="collision">
+                    <attributes>
+                      <text id="prototypeKey">id472900</text>
+                      <text id="actorTag" />
+                      <real id="mode">0</real>
+                    </attributes>
+                  </predicate>
+                </condition>
+              </conditions>
+              <behaviors>
+                <behavior id="id151821" class="InterpolateBehavior" enabled="true">
+                  <attributes>
+                    <text id="name">Interpolate</text>
+                    <text id="bundleName">Interpolate.behavior</text>
+                    <boolean id="runToCompletion">true</boolean>
+                    <text id="targetAttribute">game.attributes.id711991</text>
+                    <real id="finalValue">false</real>
+                    <real id="duration">1</real>
+                    <index id="easing">3</index>
                   </attributes>
                 </behavior>
               </behaviors>
