@@ -3,11 +3,11 @@
   <layers>
     <layer id="id374869">
       <actors>
-        <actor id="id429610" prototype="id369638">
+        <actor id="id129393" prototype="id825715">
           <attributes>
             <point id="position">
-              <real id="x">240.5</real>
-              <real id="y">158</real>
+              <real id="x">241.5</real>
+              <real id="y">158.5</real>
             </point>
             <size id="size">
               <real id="width">480</real>
@@ -18,6 +18,100 @@
           <aspects>
             <graphics>
               <attributes />
+            </graphics>
+            <motion />
+            <physics>
+              <attributes />
+            </physics>
+          </aspects>
+        </actor>
+        <actor id="id429610" prototype="id369638">
+          <attributes>
+            <point id="position">
+              <real id="x">377.5</real>
+              <real id="y">94.5</real>
+            </point>
+            <size id="size">
+              <real id="width">192</real>
+              <real id="height">217</real>
+            </size>
+            <angle id="rotation">-1.06091169026423</angle>
+            <image id="image">KittyKat</image>
+          </attributes>
+          <behaviors>
+            <behavior id="id957811" class="RuleBehavior" enabled="true">
+              <attributes>
+                <text id="name">To the left</text>
+                <text id="bundleName">Rule.behavior</text>
+                <real id="compoundConditionKind">1</real>
+              </attributes>
+              <conditions>
+                <condition id="id965165" eventType="mouse position" pluginPredicateTypeIndex="0" class="AttributeCondition">
+                  <attributes>
+                    <index id="conditionType">1</index>
+                    <text id="subjectAttribute">game.attributes.id711991</text>
+                    <text id="name">default name</text>
+                  </attributes>
+                  <predicate type="boolean">
+                    <attributes>
+                      <index id="RHS">1</index>
+                    </attributes>
+                  </predicate>
+                </condition>
+              </conditions>
+              <behaviors>
+                <behavior id="id251153" class="MoveBehavior" enabled="true">
+                  <attributes>
+                    <text id="name">Move</text>
+                    <text id="bundleName">Move.behavior</text>
+                    <angle id="direction">180</angle>
+                    <index id="space">0</index>
+                    <index id="moveType">0</index>
+                    <real id="speed">300</real>
+                  </attributes>
+                </behavior>
+              </behaviors>
+            </behavior>
+            <behavior id="id563251" class="RuleBehavior" enabled="true">
+              <attributes>
+                <text id="name">To the right</text>
+                <text id="bundleName">Rule.behavior</text>
+                <real id="compoundConditionKind">0</real>
+              </attributes>
+              <conditions>
+                <condition id="id981530" eventType="mouse position" pluginPredicateTypeIndex="0" class="AttributeCondition">
+                  <attributes>
+                    <index id="conditionType">1</index>
+                    <text id="subjectAttribute">game.attributes.id711991</text>
+                    <text id="name">default name</text>
+                  </attributes>
+                  <predicate type="boolean">
+                    <attributes>
+                      <index id="RHS">0</index>
+                    </attributes>
+                  </predicate>
+                </condition>
+              </conditions>
+              <behaviors>
+                <behavior id="id359941" class="MoveBehavior" enabled="true">
+                  <attributes>
+                    <text id="name">Move</text>
+                    <text id="bundleName">Move.behavior</text>
+                    <angle id="direction">0</angle>
+                    <index id="space">0</index>
+                    <index id="moveType">0</index>
+                    <real id="speed">300</real>
+                  </attributes>
+                </behavior>
+              </behaviors>
+            </behavior>
+          </behaviors>
+          <aspects>
+            <graphics>
+              <attributes>
+                <integer id="tileWidth" name="tileWidth">0</integer>
+                <integer id="tileHeight" name="tileHeight">0</integer>
+              </attributes>
             </graphics>
             <motion />
             <physics>

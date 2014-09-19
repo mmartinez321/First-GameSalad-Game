@@ -84,6 +84,9 @@
     <image name="sunset">
       <file name="sunset.png" size="66181" />
     </image>
+    <image name="KittyKat">
+      <file name="KittyKat.png" size="890" />
+    </image>
   </images>
   <behaviors />
 </assets>

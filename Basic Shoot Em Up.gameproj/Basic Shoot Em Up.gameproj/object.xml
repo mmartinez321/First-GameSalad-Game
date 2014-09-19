@@ -24,6 +24,7 @@ http://gamesalad.com/wiki/tutorials:basic_shoot_em_up</instructions>
     <actor id="id374390" />
     <actor id="id761755" />
     <actor id="id369638" />
+    <actor id="id825715" />
   </prototypes>
   <plugins>
     <attributes id="kiip">
@@ -59,5 +60,6 @@ http://gamesalad.com/wiki/tutorials:basic_shoot_em_up</instructions>
     <table id="id454764" name="Purchases">Purchases</table>
     <integer id="id720029" name="Player Health">100</integer>
     <integer id="id613598" name="Boss Health">100</integer>
+    <boolean id="id711991" name="Catmove">true</boolean>
   </attributes>
 </game>
